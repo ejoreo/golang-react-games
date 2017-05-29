@@ -6,10 +6,8 @@ class ChannelForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("i been submitted!");
     const node = this.refs.channel;
     const channelName = node.value;
-    console.log(channelName);
     this.props.addChannel(channelName);
     node.value = '';
   }
@@ -18,10 +16,14 @@ class ChannelForm extends Component {
   render() {
     return(
       <form onSubmit={this.handleSubmit.bind(this)}>
-        <input 
-          type='text'
-          ref='channel'
-        />
+        <div className='form-group'>
+          <input 
+            className='form-control'
+            type='text'
+            ref='channel'
+            placeholder='Add Channel'
+          />
+        </div>
       </form>
 
     )
