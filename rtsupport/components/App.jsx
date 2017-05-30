@@ -35,6 +35,21 @@ class App extends Component {
     //TODO: send to server
   }
 
+  addNewMessage(newMessage) {
+    const message = newMessage;
+    const date = new Date()
+    let {messages} = this.state;
+    messages.push({
+      id: messages.length,
+      author: 'Eric',
+      text: message, 
+      time: date.getTime(),
+      date: date.toDateString() 
+    })
+    this.setState({messages});
+    // TODO: send to server
+  }
+
   setChannel(activeChannel) {
     this.setState({activeChannel});
     // TODO: get channels messages
@@ -54,7 +69,10 @@ class App extends Component {
           />
         </div>
         <div className="messages">
-          <MessageSection {...this.state}/>
+          <MessageSection 
+            {...this.state}
+            addNewMessage={this.addNewMessage.bind(this)}
+          />
         </div>
       </div>
     )
