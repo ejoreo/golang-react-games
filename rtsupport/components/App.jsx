@@ -8,15 +8,29 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      channels: []
+      channels: [],
+      users: []
     };
   }
  
   addChannel(name) {
     let {channels} = this.state;
-    channels.push({id: channels.length, name});
+    channels.push({
+      id: channels.length, 
+      name
+    });
     this.setState({channels});
     // TODO: send to server
+  }
+
+  addUser(newUser) {
+    let {users} = this.state;
+    users.push({
+      id: users.length, 
+      userName
+    });
+    this.setState({users});
+    //TODO: send to server
   }
 
   setChannel(activeChannel) {
@@ -32,7 +46,10 @@ class App extends Component {
             addChannel={this.addChannel.bind(this)}
             setChannel={this.setChannel.bind(this)}
           />
-          <UserSection />
+          <UserSection 
+            {...this.state}
+            addUser={this.addUser.bind(this)}
+          />
         </div>
       </div>
     )

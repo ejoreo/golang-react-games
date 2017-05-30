@@ -7,7 +7,7 @@ class ChannelSection extends Component {
 
   render() {
     return(
-      <div className='support panel panel-primary'>
+      <div className='support panel panel-primary nav-section'>
         <div className='panel-heading'>
           <strong>Channels</strong>
         </div>
