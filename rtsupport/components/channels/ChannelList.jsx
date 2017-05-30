@@ -14,7 +14,7 @@ class ChannelList extends Component {
             {...this.props}
           />
         })
-        }
+      }
       </ul>
     )
   }

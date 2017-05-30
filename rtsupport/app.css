@@ -52,13 +52,20 @@
 .message > .author{
   flex-basis: 100%;
 }
-.message > .body{
+.message > .text{
   flex-basis: 100%;
 }
 .active {
   background-color: #E8E8E8;
 }
-.timestamp{
+.time{
+  color: #808080;
+  font-style: italic;
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+.date{
   color: #808080;
   font-style: italic;
   padding-left: 10px;

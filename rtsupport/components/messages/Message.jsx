@@ -8,10 +8,10 @@ class Message extends Component {
         return (
             <li className='message'>
                 <div>
-                    <span className='message-time'>{message.time}</span> 
-                    <strong className='message-author'>{message.author}</strong> 
-                    <span className='message-text'>{message.text}</span>
-                    <span className='message-date'>{message.date}</span>
+                    <strong className='message author'>{message.author}: </strong>
+                    <span className='message text'>{message.text}</span>
+                    <span className='message time'>{message.time}</span> 
+                    <span className='message date'>{message.date}</span>
                 </div>
             </li>
         );

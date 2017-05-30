@@ -6,17 +6,16 @@ class MessageList extends Component {
 
   render() {
     return(
-      <div>
-        <ul>
-          { this.props.messages.map(msg => {
-              <Message 
-                key={msg.id}
-                message={msg}
-                {...this.props}
-              />
-          })}
-        </ul>
-      </div>
+      <ul className='messages'>
+        { this.props.messages.map(msg => {
+           return <Message 
+              message={msg}
+              key={msg.id}
+              {...this.props}
+            />
+        })
+      }
+      </ul>
     )
   }
 

@@ -43,8 +43,9 @@ class App extends Component {
       id: messages.length,
       author: 'Eric',
       text: message, 
-      time: date.getTime(),
-      date: date.toDateString() 
+      time: date.toTimeString(),
+      date: date.toDateString(),
+      timestamp: date.getTime() 
     })
     this.setState({messages});
     // TODO: send to server

@@ -6,9 +6,14 @@ import MessageForm from './MessageForm.jsx';
 class MessageSection extends Component {
   render() {
     return(
-      <div className='support panel panel-primary message-section'>
-        <MessageList {...this.props} />
-        <MessageForm {...this.props} />
+      <div className='support panel panel-primary messages-container'>
+        <div className='panel-heading'>
+          <strong>Messages</strong>
+        </div>
+        <div className='panel-body messages'>
+          <MessageList {...this.props} />
+          <MessageForm {...this.props} />
+        </div>
       </div>
     )
   }
