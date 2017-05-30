@@ -7,9 +7,10 @@ class UserNameForm extends Component {
 
   handleSubmit(e) {
   e.preventDefault();
-    const node = this.refs.user;
-    const userName = node.value;
-    this.props.addUser(userName);
+    console.log(this.props)
+    const node = this.refs.userName;
+    const newUserName = node.value;
+    this.props.addNewUser(newUserName);
     node.value = '';
   }
 
@@ -20,7 +21,7 @@ class UserNameForm extends Component {
           <input 
             className='form-control'
             type='text'
-            ref='user'
+            ref='userName'
             placeholder='Add your username'
           />
         </div>
@@ -30,7 +31,7 @@ class UserNameForm extends Component {
 }
 
 UserNameForm.propTypes = {
-  addUser: PropTypes.func.isRequired
+  addNewUser: PropTypes.func.isRequired
 }
 
 export default UserNameForm;

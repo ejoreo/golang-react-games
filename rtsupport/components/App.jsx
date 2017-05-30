@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ChannelSection from './channels/ChannelSection.jsx';
-import UserSection from './users/UserSection.jsx';
+import UserNameSection from './users/UserNameSection.jsx';
 
 
 
@@ -23,11 +23,11 @@ class App extends Component {
     // TODO: send to server
   }
 
-  addUser(newUser) {
+  addNewUser(newUserName) {
     let {users} = this.state;
     users.push({
       id: users.length, 
-      userName
+      userName: newUserName
     });
     this.setState({users});
     //TODO: send to server
@@ -46,9 +46,9 @@ class App extends Component {
             addChannel={this.addChannel.bind(this)}
             setChannel={this.setChannel.bind(this)}
           />
-          <UserSection 
+          <UserNameSection 
             {...this.state}
-            addUser={this.addUser.bind(this)}
+            addNewUser={this.addNewUser.bind(this)}
           />
         </div>
       </div>

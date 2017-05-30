@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import UserNameForm from './UserNameForm.jsx'
+import UserNameList from './UserNameList.jsx'
 
 
-class UserSection extends Component {
+class UserNameSection extends Component {
 
   render() {
     return(
@@ -12,17 +13,18 @@ class UserSection extends Component {
           <strong>Users</strong>
         </div>
         <div className='panel-body users'>
-          <UserNameForm />
+          <UserNameList {...this.props} />
+          <UserNameForm {...this.props} />
         </div>
       </div>
     )
   }
 }
 
-UserSection.propTypes = {
+UserNameSection.propTypes = {
   users: PropTypes.array.isRequired,
-  addUser: PropTypes.func.isRequired
+  addNewUser: PropTypes.func.isRequired
 }
 
 
-export default UserSection;
+export default UserNameSection;
