@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ChannelSection from './channels/ChannelSection.jsx';
 import UserNameSection from './users/UserNameSection.jsx';
+import MessageSection from './messages/MessageSection.jsx';
 
 
 
@@ -9,7 +10,8 @@ class App extends Component {
     super(props);
     this.state = {
       channels: [],
-      users: []
+      users: [],
+      messages: []
     };
   }
  
@@ -50,6 +52,9 @@ class App extends Component {
             {...this.state}
             addNewUser={this.addNewUser.bind(this)}
           />
+        </div>
+        <div className="messages">
+          <MessageSection {...this.state}/>
         </div>
       </div>
     )

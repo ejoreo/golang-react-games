@@ -16,6 +16,12 @@
   margin: 2px;
 }
 
+.message-section {
+  border: 2px;
+  padding: 2px;
+  margin: 2px;
+}
+
 .messages-container{
   flex-basis: 80%;
   margin-bottom: 0;
