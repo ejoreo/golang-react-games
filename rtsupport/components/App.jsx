@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import ChannelSection from './channels/ChannelSection.jsx';
 
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -8,6 +10,7 @@ class App extends Component {
       channels: []
     };
   }
+
   
   addChannel(name) {
     let {channels} = this.state;
@@ -24,7 +27,7 @@ class App extends Component {
     return (
       <div className='app'>
         <div className='nav'>
-          <ChannelSection 
+          <ChannelSection  
             {...this.state}
             addChannel={this.addChannel.bind(this)}
             setChannel={this.setChannel.bind(this)}
@@ -35,5 +38,5 @@ class App extends Component {
   }
 }
 
-export default App
+export default App;
 
